@@ -1,0 +1,115 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora</title>
+</head>
+
+    <script lang="JavaScript">
+
+        function operacao(bot)
+        {   
+            frm.txtSaida.value += bot;
+        }
+
+        function resetar()
+        {
+            frm.txtSaida.value = "";
+        }
+
+        function calcular()
+        {
+            frm.txtSaida.value = eval(frm.txtSaida.value)
+        }
+    </script>
+
+    <style type="text/css">
+            input[type=button]
+            {
+                border-radius: 10px;  
+                width: 50px;
+                height: 50px;
+                background-color: #242526;
+                color: white;
+
+            }
+
+            input[type=text]
+            {
+                border-radius: 8px;  
+                width: 200px;
+                height: 50px;
+                border: 1px solid;
+                border-color: #242526;
+            }
+
+            body
+            {
+                font-family: Arial;
+                color: white;
+            }
+
+            div
+            {
+                width: 200px;
+                height: 300px;
+                border: 1px solid;
+                border-radius: 10px;
+                border-color: black;
+                background-color: #242526;
+            }
+
+            #C
+            {
+                border-radius: 10px;  
+                width: 200px;
+                height: 50px;
+                border: 1px solid;
+                border-color: black;
+                background-color: #b30507;
+                text-align: left;
+            }
+    </style>
+
+<body>
+    <center>
+        <div>
+        <form name="frm">
+            <input type="text" name="txtSaida" readonly><br>
+            <table>
+                <tr>
+                    <input type="button" id="C" name="btnLimpar" value="C" onclick="resetar();"><br>
+                </tr>
+
+                <tr>
+                    <input type="button" name="btn7" value="7" onclick="operacao(7);">
+                    <input type="button" name="btn8" value="8" onclick="operacao(8);">
+                    <input type="button" name="btn9" value="9" onclick="operacao(9);">
+                    <input type="button" name="btnDivi" value="/" onclick="operacao('/');"><br>
+                </tr>
+
+                <tr>
+                    <input type="button" name="btn4" value="4" onclick="operacao(4);">
+                    <input type="button" name="btn5" value="5" onclick="operacao(5);">
+                    <input type="button" name="btn6" value="6" onclick="operacao(6);">
+                    <input type="button" name="btnMult" value="*" onclick="operacao('*');"><br>
+                </tr>
+
+                <tr>
+                    <input type="button" name="btn1" value="1" onclick="operacao(1);">
+                    <input type="button" name="btn2" value="2" onclick="operacao(2);">
+                    <input type="button" name="btn3" value="3" onclick="operacao(3);">
+                    <input type="button" name="btnSub" value="-" onclick="operacao('-');"><br>
+                </tr>
+
+                <tr>
+                    <input type="button" name="btn0" value="0" onclick="operacao(0);">
+                    <input type="button" name="btnVirg" value="," onclick="operacao('.');">
+                    <input type="button" name="btnCalc" value="=" onclick="calcular('=');">
+                    <input type="button" name="btnSoma" value="+" onclick="operacao('+');"><br>
+                </tr>
+        </form>
+        </div>
+
+    </center>
+</body>
+</html>
